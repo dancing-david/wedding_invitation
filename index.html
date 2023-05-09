@@ -175,12 +175,17 @@
                     <script>
                         function initMap() {
                             map = new naver.maps.Map('map', {
-                                position: new naver.maps.LatLng(37.3595704, 127.105399),
+                                center: new naver.maps.LatLng(37.3595704, 127.105399),
                                 zoom: 10
+                            });
+
+                            marker = new naver.maps.Marker({
+                                position: new naver.maps.LatLng(37.3595704, 127.105399),
+                                map: map
                             });
                         }
 
-                        var map = new naver.maps.Map('map', mapOptions);
+                        // var map = new naver.maps.Map('map', mapOptions);
                     </script>
                 </div>
             </div>
