@@ -112,6 +112,28 @@
             }
         }
     });
+
+    $.ajax({
+        type: 'get',
+        beforeSend: function(xhr){
+            xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://mnx2ogn5dc.execute-api.ap-northeast-2.amazonaws.com');
+			xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		},
+        url: 'https://mnx2ogn5dc.execute-api.ap-northeast-2.amazonaws.com/v1/comment',
+		error: function() {
+		    console.log('fail')
+		},
+		success: function(response) {
+            console.log(response)
+            for (var comment of response) {
+                if (response) {
+                    var html = '<table class="table"><tbody></tbody></table>';
+                    $('.table-responsive')
+                } else {
+                    $('.table-responsive').html('<span>축하 메세지를 남겨주세요</span>')
+                }
+            }
+		}
+    });
     
 })(jQuery);
-
