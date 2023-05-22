@@ -114,7 +114,7 @@
     });
 
     $.ajax({
-        type: 'post',
+        type: 'get',
         headers: {'Access-Control-Allow-Origin': '*'},
         contentType: 'application/json; charset=utf-8',
         url: 'https://mnx2ogn5dc.execute-api.ap-northeast-2.amazonaws.com/v1/comment',
@@ -133,5 +133,5 @@
             }
 		}
     });
-    
+
 })(jQuery);
